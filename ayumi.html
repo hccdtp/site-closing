@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>あゆみ整体整骨院 閉業のおしらせ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- コンテンツ -->
+    <div class="content">
+        <h1>あゆみ整体整骨院 閉店のお知らせ</h1>
+        <p>平素は『あゆみ整体整骨院』をご利用いただきまして誠にありがとうございます。</p>
+        <p>当店は平成27年3月27日 OPEN 以来、皆様のお引き立てを賜り今日まで営業してまいりましたが、諸般の事情により 2月28日(水) をもちまして閉店することとなりました。</p>
+        <p>急なお知らせになりましたことをお詫びいたしますとともに、ご利用いただきましたお客様にはご迷惑をおかけすることとなり大変申し訳ございません。</p>
+        <p>皆様の長年にわたるご愛顧に心より感謝申し上げます。<br>本当にありがとうございました。</p>
+        <p>なお　近隣のグループ店舗で玉津に『ゆるり整体整骨院』、西神南駅に『ぴーす整体整骨院』が営業しております。お体の調子で気になることなどございましたら、『あゆみ整体整骨院』同様に、いつでもご相談ください。</p>
+        <div class="cards">
+            <div class="card">
+                <img src="exterior_tamatsu-yururi_for_ayumi.jpg" alt="ゆるり整体整骨院">
+                <h2>ゆるり整体整骨院</h2>
+                <p>玉津インターチェンジから国道175号を北へ車で1分</p>
+                <a href="https://lin.ee/AiT5pMs">LINEお問い合わせ</a>
+            </div>
+            <div class="card">
+                <img src="exterior_peace_for_ayumi.jpg" alt="ぴーす整体整骨院">
+                <h2>ぴーす整体整骨院</h2>
+                <p>地下鉄『西神南』駅構内・改札を出てすぐ</p>
+                <a href="https://lin.ee/KGjy2Vt">LINEお問い合わせ</a>
+            </div>
+        </div>
+    </div>
+    <script>window.addEventListener('load', function() {
+    // スライドショーで使用する画像を配列に格納
+    const images = [
+        'slide_ayumi_1.jpg',
+        'slide_ayumi_2.jpg',
+        'slide_ayumi_3.jpg',
+        'slide_ayumi_4.jpg'
+    ];
+
+    // 画像の読み込みを確認
+    let loadedImages = 0;
+    images.forEach((src) => {
+        const img = new Image();
+        img.src = src;
+        img.onload = () => {
+            loadedImages++;
+            // 全ての画像が読み込まれたらスライドショーを開始
+            if (loadedImages === images.length) {
+                document.body.classList.add('loaded');
+            }
+        };
+    });
+});
+//</script>
+</body>
+</html>
