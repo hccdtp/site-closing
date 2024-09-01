@@ -3,8 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>背景スライドショー</title>
-    <link rel="stylesheet" href="style.css">
+    <title>店舗閉店のお知らせ</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        body.loaded::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            animation: slideShow 16s infinite;
+        }
+
+        @keyframes slideShow {
+            0%   { background-image: url('https://picsum.photos/seed/aaa/1920/1080'); }
+            25%  { background-image: url('https://picsum.photos/seed/bbb/1920/1080'); }
+            50%  { background-image: url('https://picsum.photos/seed/ccc/1920/1080'); }
+            75%  { background-image: url('https://picsum.photos/seed/ddd/1920/1080'); }
+            100% { background-image: url('https://picsum.photos/seed/aaa/1920/1080'); }
+        }
+
+        .content {
+            position: relative;
+            max-width: 640px;
+            margin-left: auto;
+            margin-right: auto;
+            z-index: 1;
+            color: black; /* テキストカラー「黒」。ダークモード時は「白」に変えること。 */
+            text-align: center;
+            padding: 20% 10px;
+            font-family: Arial, sans-serif;
+        }
+
+        body.loaded::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.65); /* 白の半透明オーバーレイ。ダークモード時は黒に変更すること。 */
+            z-index: 0;
+        }
+
+        /* カード型アイテムを横並びで表示 */
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap; /* 横並びから縦並びに切り替え */
+        }
+        .card {
+            background: #f4f4f4;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            width: 100%; /* デフォルトで100% */
+            max-width: 250px; /* 最大幅290px */
+            text-align: center;
+            margin: 10px;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .card h2 {
+            font-size: 18px;
+            color: #333;
+        }
+        .card p {
+            color: #666;
+        }
+        .card a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        .card a:hover {
+            text-decoration: underline;
+        }
+
+        /* レスポンシブ対応 */
+        @media (max-width: 600px) {
+            .card { width: 100%; }
+        }
+
+        /* リスト型アイテムを縦並びで表示 */
+        .list { list-style: none; padding: 0; }
+        .list-item {
+            background: #f4f4f4;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            text-align: left; /* テキストを左揃え */
+            justify-content: flex-start;
+        }
+        .list-item img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+        .list-item div {
+            flex: 1; /* 残りのスペースを占める */
+        }
+        .list-item h2 {
+            font-size: 18px;
+            color: #333;
+            margin: 0;
+        }
+        .list-item p {
+            color: #666;
+            margin: 10px 0;
+        }
+        .list-item a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        .list-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* 企業ロゴのホバー効果 */
+        .corp-logo {
+            transition: filter 0.3s ease; /* ホバー時のエフェクト */
+        }
+
+        .corp-logo:hover {
+            filter: brightness(1.5); /* 明るくする */
+        }
+
+        /* LINEっぽいボタンのスタイル */
+        .line-button {
+            display: inline-block;
+            background-color: #00c300; /* LINEの緑色 */
+            color: white!important;
+            padding: 10px 20px;
+            border-radius: 25px; /* 角丸を強調 */
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease; /* ホバー時のエフェクト */
+        }
+
+        .line-button:hover {
+            background-color: #00a300; /* 少し濃い緑色に変化 */
+        }
+    </style>
 </head>
 <body>
     <!-- コンテンツ -->
@@ -19,13 +176,13 @@
                 <img src="https://placehold.jp/8a92ff/ffffff/400x400.png?text=shop-1" alt="shop-1">
                 <h2>shop-1</h2>
                 <p>2Fです。</p>
-                <a href="https://example.com/shop-1">詳細を見る</a>
+                <a href="https://example.com/shop-1" class="line-button">LINEお問い合わせ</a>
             </div>
             <div class="card">
                 <img src="https://placehold.jp/ffb8f5/ffffff/400x400.png?text=shop-2" alt="shop-2">
                 <h2>shop-2</h2>
                 <p>隣の区にあります。</p>
-                <a href="https://example.com/shop-2">詳細を見る</a>
+                <a href="https://example.com/shop-2" class="line-button">LINEお問い合わせ</a>
             </div>
         </div>
         <ul class="list">
@@ -34,7 +191,7 @@
                 <div>
                     <h2>shop-1</h2>
                     <p>2Fです。</p>
-                <a href="https://example.com/shop-1">詳細を見る</a>
+                <a href="https://example.com/shop-1" class="line-button">LINEお問い合わせ</a>
                 </div>
             </li>
             <li class="list-item">
@@ -42,11 +199,13 @@
                 <div>
                     <h2>shop-2</h2>
                     <p>隣の区にあります。</p>
-                <a href="https://example.com/shop-2">詳細を見る</a>
+                <a href="https://example.com/shop-2" class="line-button">LINEお問い合わせ</a>
                 </div>
             </li>
         </ul>
-        <div style="height: 2000px;"></div> <!-- スクロールのためのスペースを確保 -->
+        <p>
+            <a href="https://example.com" class="corp-logo"><img src="https://placehold.jp/48/ffff00/000000/120x120.png?text=logo&css=%7B%22border-radius%22%3A%2260px%22%7D" alt="運営会社ロゴ"></a>
+        </p>
     </div>
     <script>window.addEventListener('load', function() {
     // スライドショーで使用する画像を配列に格納
