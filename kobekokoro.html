@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>こころ整体整骨院 閉業のお知らせ</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        body.loaded::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            animation: slideShow 16s infinite;
+        }
+
+        @keyframes slideShow {
+            0%   { background-image: url('slide_kobekoko_1.jpg'); }
+            25%  { background-image: url('slide_kobekoko_2.jpg'); }
+            50%  { background-image: url('slide_kobekoko_3.jpg'); }
+            75%  { background-image: url('slide_kobekoko_4.jpg'); }
+            100% { background-image: url('slide_kobekoko_1.jpg'); }
+        }
+
+        .content {
+            position: relative;
+            max-width: 640px;
+            margin-left: auto;
+            margin-right: auto;
+            z-index: 1;
+            color: black; /* テキストカラー「黒」。ダークモード時は「白」に変えること。 */
+            text-align: center;
+            padding: 20% 10px;
+            font-family: Arial, sans-serif;
+        }
+
+        body.loaded::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.65); /* 白の半透明オーバーレイ。ダークモード時は黒に変更すること。 */
+            z-index: 0;
+        }
+
+        /* カード型アイテムを横並びで表示 */
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap; /* 横並びから縦並びに切り替え */
+        }
+        .card {
+            background: #f4f4f4;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            width: 100%; /* デフォルトで100% */
+            max-width: 250px; /* 最大幅290px */
+            text-align: center;
+            margin: 10px;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .card h2 {
+            font-size: 18px;
+            color: #333;
+        }
+        .card p {
+            color: #666;
+        }
+        .card a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        .card a:hover {
+            text-decoration: underline;
+        }
+
+        /* レスポンシブ対応 */
+        @media (max-width: 600px) {
+            .card { width: 100%; }
+        }
+
+        /* 企業ロゴのホバー効果 */
+        .corp-logo {
+            transition: filter 0.3s ease; /* ホバー時のエフェクト */
+        }
+
+        .corp-logo:hover {
+            filter: brightness(2); /* 明るくする */
+        }
+
+        /* LINEっぽいボタンのスタイル */
+        .line-button {
+            display: inline-block;
+            background-color: #00c300; /* LINEの緑色 */
+            color: white!important;
+            padding: 10px 20px;
+            border-radius: 25px; /* 角丸を強調 */
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease; /* ホバー時のエフェクト */
+        }
+
+        .line-button:hover {
+            background-color: #00a300; /* 少し濃い緑色に変化 */
+        }
+    </style>
+</head>
+<body>
+    <!-- コンテンツ -->
+    <div class="content">
+        <h1>こころ整体整骨院 閉業のお知らせ</h1>
+        <p>平素は『こころ整体整骨院』をご利用いただきまして誠にありがとうございます。</p>
+        <p>当店は 平成22年4月9日 OPEN 以来、皆様のお引き立てを賜り今日まで営業してまいりましたが、諸般の事情により 8月28日(水) をもちまして閉店することとなりました。</p>
+        <p>急なお知らせになりましたことをお詫びいたしますとともに、ご利用いただきましたお客様にはご迷惑をおかけすることとなり大変申し訳ございません。<br>皆様の長年にわたるご愛顧に心より感謝申し上げます。本当にありがとうございました。</p>
+        <p>なお　9月下旬には、同ビル2F『全身ほぐし整処ゆるり 六甲道店』と統合し、リニューアルを予定しております。リニューアル準備期間に入るまで、2F『全身ほぐし整処ゆるり 六甲道店』は引き続き営業しておりますので、お気軽に起こしください。</p>
+        <p>また　近隣のグループ店舗で東灘区に『ひなた整体整骨院』が営業しております。お体の調子で気になることなどございましたら、『こころ整体整骨院』同様に、いつでもご相談ください。</p>
+        <p>また皆様にお会いできる日を心よりお待ちしております。<br>これからもご愛顧いただけますよう、どうぞよろしくお願い申し上げます。</p>
+        <div class="cards">
+            <div class="card">
+                <img src="exterior_rokkomichi_for_kobekokoro.jpg" alt="全身ほぐし整処ゆるり六甲道店">
+                <h2>全身ほぐし整処ゆるり六甲道店</h2>
+                <p>2階で営業しております。六甲本通商店街内・FTKビル</p>
+                <a href="https://lin.ee/5TJR4Z2" class="line-button">LINEお問い合わせ</a>
+            </div>
+            <div class="card">
+                <img src="exterior_hinata_for_kobekokoro.png" alt="ひなた整体整骨院">
+                <h2>ひなた整体整骨院</h2>
+                <p>阪神本線「深江」駅より徒歩5分</p>
+                <a href="https://lin.ee/AaJRMjG" class="line-button">LINEお問い合わせ</a>
+            </div>
+        </div>
+        <p>
+            <a href="https://minnayorokobu.com" class="corp-logo"><img src="hcc_logo.png" alt="株式会社 ＨＣＣ"></a>
+        </p>
+    </div>
+    <script>window.addEventListener('load', function() {
+    // スライドショーで使用する画像を配列に格納
+    const images = [
+        'slide_kobekoko_1.jpg',
+        'slide_kobekoko_2.jpg',
+        'slide_kobekoko_3.jpg',
+        'slide_kobekoko_4.jpg'
+    ];
+
+    // 画像の読み込みを確認
+    let loadedImages = 0;
+    images.forEach((src) => {
+        const img = new Image();
+        img.src = src;
+        img.onload = () => {
+            loadedImages++;
+            // 全ての画像が読み込まれたらスライドショーを開始
+            if (loadedImages === images.length) {
+                document.body.classList.add('loaded');
+            }
+        };
+    });
+});
+//</script>
+</body>
+</html>
