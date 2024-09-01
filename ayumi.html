@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>あゆみ整体整骨院 閉業のお知らせ</title>
+    <title>あゆみ整体整骨院 閉店のお知らせ</title>
     <style>
         body, html {
             margin: 0;
@@ -29,8 +29,8 @@
         @keyframes slideShow {
             0%   { background-image: url('slide_ayumi_1.jpg'); }
             25%  { background-image: url('slide_ayumi_2.jpg'); }
-            50%  { background-image: url('slide_ayumi_3.jpg'); }
-            75%  { background-image: url('slide_ayumi_4.jpg'); }
+            50%  { background-image: url('slide_ayumi_4.jpg'); }
+            75%  { background-image: url('slide_ayumi_3.jpg'); }
             100% { background-image: url('slide_ayumi_1.jpg'); }
         }
 
@@ -40,7 +40,7 @@
             margin-left: auto;
             margin-right: auto;
             z-index: 1;
-            color: black; /* テキストカラーを白に設定 */
+            color: black; /* テキストカラー「黒」。ダークモード時は「白」に変えること。 */
             text-align: center;
             padding: 20% 10px;
             font-family: Arial, sans-serif;
@@ -53,7 +53,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba(255, 255, 255, 0.65); /* 黒の半透明オーバーレイ */
+            background-color: rgba(255, 255, 255, 0.65); /* 白の半透明オーバーレイ。ダークモード時は黒に変更すること。 */
             z-index: 0;
         }
 
@@ -98,50 +98,27 @@
             .card { width: 100%; }
         }
 
-        /* リスト型アイテムを縦並びで表示 */
-        .list { list-style: none; padding: 0; }
-        .list-item {
-            background: #f4f4f4;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            text-align: left; /* テキストを左揃え */
-            justify-content: flex-start;
-        }
-        .list-item img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-        }
-        .list-item div {
-            flex: 1; /* 残りのスペースを占める */
-        }
-        .list-item h2 {
-            font-size: 18px;
-            color: #333;
-            margin: 0;
-        }
-        .list-item p {
-            color: #666;
-            margin: 10px 0;
-        }
-        .list-item a {
+        /* LINEっぽいボタンのスタイル */
+        .line-button {
+            display: inline-block;
+            background-color: #00c300; /* LINEの緑色 */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px; /* 角丸を強調 */
             text-decoration: none;
-            color: #007bff;
+            font-weight: bold;
+            transition: background-color 0.3s ease; /* ホバー時のエフェクト */
         }
-        .list-item a:hover {
-            text-decoration: underline;
+
+        .line-button:hover {
+            background-color: #00a300; /* 少し濃い緑色に変化 */
         }
     </style>
 </head>
 <body>
     <!-- コンテンツ -->
     <div class="content">
-        <h1>あゆみ整体整骨院 閉業のお知らせ</h1>
+        <h1>あゆみ整体整骨院 閉店のお知らせ</h1>
         <p>平素は『あゆみ整体整骨院』をご利用いただきまして誠にありがとうございます。</p>
         <p>当店は平成27年3月27日 OPEN 以来、皆様のお引き立てを賜り今日まで営業してまいりましたが、諸般の事情により 2月28日(水) をもちまして閉店することとなりました。</p>
         <p>急なお知らせになりましたことをお詫びいたしますとともに、ご利用いただきましたお客様にはご迷惑をおかけすることとなり大変申し訳ございません。</p>
@@ -158,11 +135,11 @@
                 <img src="exterior_peace_for_ayumi.jpg" alt="ぴーす整体整骨院">
                 <h2>ぴーす整体整骨院</h2>
                 <p>地下鉄『西神南』駅構内・改札を出てすぐ</p>
-                <a href="https://lin.ee/KGjy2Vt">LINEお問い合わせ</a>
+                <a href="https://lin.ee/KGjy2Vt" class="line-button">LINEお問い合わせ</a>
             </div>
         </div>
         <p>
-            <a href="https://minnayorokobu.com"><img src="hcc_logo.png" alt="株式会社 ＨＣＣ"></a>
+            <a href="https://minnayorokobu.com" class="line-button"><img src="hcc_logo.png" alt="株式会社 ＨＣＣ"></a>
         </p>
     </div>
     <script>window.addEventListener('load', function() {
@@ -170,8 +147,8 @@
     const images = [
         'slide_ayumi_1.jpg',
         'slide_ayumi_2.jpg',
-        'slide_ayumi_3.jpg',
-        'slide_ayumi_4.jpg'
+        'slide_ayumi_4.jpg',
+        'slide_ayumi_3.jpg'
     ];
 
     // 画像の読み込みを確認
