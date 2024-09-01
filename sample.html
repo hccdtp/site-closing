@@ -23,9 +23,13 @@
             background-size: cover;
             background-position: center;
             z-index: -1;
+            /* スライドショー用のアニメーションスタイル */
+            /* JavaScriptとセットで動作するタイプなので消さないでください */
             animation: slideShow 16s infinite;
         }
 
+        /* スライドショー用のアニメーションスタイル */
+        /* JavaScriptとセットで動作するタイプなので消さないでください */
         @keyframes slideShow {
             0%   { background-image: url('https://picsum.photos/seed/aaa/1920/1080'); }
             25%  { background-image: url('https://picsum.photos/seed/bbb/1920/1080'); }
@@ -171,6 +175,8 @@
         <p>2F店舗は引き続き営業中で、9月27日（金）にリニューアルオープン予定です。</p>
         <p>お近くの系列店舗へのご来店をお待ちしております。</p>
         <p>詳しくは、2F店舗までお問い合わせください。</p>
+
+        <!-- カード型アイテム ここから -->
         <div class="cards">
             <div class="card">
                 <img src="https://placehold.jp/8a92ff/ffffff/400x400.png?text=shop-1" alt="shop-1">
@@ -185,6 +191,9 @@
                 <a href="https://example.com/shop-2" class="line-button">LINEお問い合わせ</a>
             </div>
         </div>
+        <!-- カード型アイテム ここまで -->
+
+        <!-- リスト型アイテム ここから -->
         <ul class="list">
             <li class="list-item">
                 <img src="https://placehold.jp/8a92ff/ffffff/400x400.png?text=shop-1" alt="shop-1">
@@ -203,10 +212,17 @@
                 </div>
             </li>
         </ul>
+        <!-- リスト型アイテム ここまで -->
+
+        <!-- 運営会社のロゴとリンク ここから -->
         <p>
             <a href="https://example.com" class="corp-logo"><img src="https://placehold.jp/48/ffff00/000000/120x120.png?text=logo&css=%7B%22border-radius%22%3A%2260px%22%7D" alt="運営会社ロゴ"></a>
         </p>
+        <!-- 運営会社のロゴとリンク ここまで -->
     </div>
+
+    <!-- 画像のプリロードとスライドショー開始のためのスクリプト ここから -->
+    <!-- CSSとセットで動作するタイプなので消さないでください -->
     <script>window.addEventListener('load', function() {
     // スライドショーで使用する画像を配列に格納
     const images = [
