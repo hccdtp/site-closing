@@ -98,6 +98,15 @@
             .card { width: 100%; }
         }
 
+        /* 企業ロゴのホバー効果 */
+        .corp-logo {
+            transition: opacity 0.3s ease; /* ホバー時のエフェクト */
+        }
+
+        .corp-logo:hover {
+            opacity: 0.7; /* 半透明化で明るくなったように見せる */
+        }
+
         /* LINEっぽいボタンのスタイル */
         .line-button {
             display: inline-block;
@@ -139,7 +148,7 @@
             </div>
         </div>
         <p>
-            <a href="https://minnayorokobu.com"><img src="hcc_logo.png" alt="株式会社 ＨＣＣ"></a>
+            <a href="https://minnayorokobu.com" class="corp-logo"><img src="hcc_logo.png" alt="株式会社 ＨＣＣ"></a>
         </p>
     </div>
     <script>window.addEventListener('load', function() {
