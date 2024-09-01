@@ -159,5 +159,29 @@ body.loaded::after {
             </div>
         </div>
     </div>
+    <script>window.addEventListener('load', function() {
+    // スライドショーで使用する画像を配列に格納
+    const images = [
+        'slide_ayumi_1.jpg',
+        'slide_ayumi_2.jpg',
+        'slide_ayumi_3.jpg',
+        'slide_ayumi_4.jpg'
+    ];
+
+    // 画像の読み込みを確認
+    let loadedImages = 0;
+    images.forEach((src) => {
+        const img = new Image();
+        img.src = src;
+        img.onload = () => {
+            loadedImages++;
+            // 全ての画像が読み込まれたらスライドショーを開始
+            if (loadedImages === images.length) {
+                document.body.classList.add('loaded');
+            }
+        };
+    });
+});
+//</script>
 </body>
 </html>
